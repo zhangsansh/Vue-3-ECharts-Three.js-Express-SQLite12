@@ -1,0 +1,169 @@
+:root {
+  --sc-bg: #0a1628;
+  --sc-panel: rgba(6, 30, 60, 0.55);
+  --sc-primary: #00d4ff;
+  --sc-accent: #00ffa3;
+  --sc-text: #e8f4ff;
+  --sc-muted: #8fb3d9;
+  --sc-border: rgba(0, 212, 255, 0.35);
+  --sc-font: "Orbitron", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --sc-font-size: 14px;
+  --el-bg-color: #0d1b2e;
+  --el-bg-color-overlay: #12253d;
+  --el-fill-color-blank: transparent;
+  --el-text-color-primary: #e8f4ff;
+  --el-text-color-regular: #c9e2f8;
+  --el-border-color: rgba(0, 212, 255, 0.28);
+  --el-border-color-light: rgba(0, 212, 255, 0.18);
+  --el-table-bg-color: transparent;
+  --el-table-tr-bg-color: transparent;
+  --el-table-header-bg-color: rgba(0, 40, 80, 0.65);
+  --el-table-row-hover-bg-color: rgba(0, 212, 255, 0.12);
+  --el-fill-color-light: rgba(0, 40, 80, 0.45);
+  --el-fill-color: rgba(0, 40, 80, 0.35);
+  --el-mask-color: rgba(2, 10, 24, 0.72);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--sc-bg);
+  color: var(--sc-text);
+  font-family: var(--sc-font);
+  font-size: var(--sc-font-size);
+}
+
+body {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 20, 40, 0.6);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--sc-primary), #0077aa);
+  border-radius: 8px;
+  border: 2px solid rgba(0, 20, 40, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sc-accent);
+}
+
+.page-scroll {
+  height: 100%;
+  overflow: auto;
+  padding: 16px 20px 28px;
+}
+
+.glass-panel {
+  background: var(--sc-panel);
+  border: 1px solid var(--sc-border);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 24px rgba(0, 212, 255, 0.08) inset;
+}
+
+.panel-title {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--sc-primary);
+  margin-bottom: 8px;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.45);
+}
+
+/* Eliminate default white table backgrounds */
+.el-table,
+.el-table__inner-wrapper,
+.el-table__body-wrapper,
+.el-table__header-wrapper,
+.el-table tr,
+.el-table th.el-table__cell,
+.el-table td.el-table__cell,
+.el-table__empty-block,
+.el-table__body,
+.el-table__header {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+.el-table {
+  --el-table-bg-color: transparent !important;
+  --el-table-tr-bg-color: transparent !important;
+  --el-table-header-bg-color: rgba(0, 40, 80, 0.65) !important;
+  color: var(--sc-text);
+}
+
+.el-table th.el-table__cell {
+  background: rgba(0, 40, 80, 0.65) !important;
+  color: var(--sc-primary) !important;
+  border-bottom-color: var(--sc-border) !important;
+}
+
+.el-table td.el-table__cell {
+  border-bottom-color: rgba(0, 212, 255, 0.12) !important;
+}
+
+.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+  background: rgba(0, 60, 100, 0.22) !important;
+}
+
+.el-table__body tr:hover > td.el-table__cell {
+  background: rgba(0, 212, 255, 0.12) !important;
+}
+
+.el-card,
+.el-dialog,
+.el-drawer,
+.el-pagination button,
+.el-pager li,
+.el-input__wrapper,
+.el-select__wrapper,
+.el-textarea__inner {
+  background: rgba(8, 24, 48, 0.85) !important;
+  color: var(--sc-text) !important;
+  box-shadow: none;
+}
+
+.el-dialog {
+  border: 1px solid var(--sc-border);
+}
+
+.el-form-item__label {
+  color: var(--sc-muted) !important;
+}
+
+.el-button--primary {
+  --el-button-bg-color: #0088cc;
+  --el-button-border-color: var(--sc-primary);
+}
+
+.el-menu {
+  background: transparent !important;
+  border-right: none !important;
+}
+
+.el-menu-item,
+.el-sub-menu__title {
+  color: var(--sc-muted) !important;
+}
+
+.el-menu-item.is-active,
+.el-menu-item:hover {
+  background: rgba(0, 212, 255, 0.12) !important;
+  color: var(--sc-primary) !important;
+}
